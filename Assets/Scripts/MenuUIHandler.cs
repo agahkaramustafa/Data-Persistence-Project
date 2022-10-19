@@ -7,10 +7,11 @@ using TMPro;
 public class MenuUIHandler : MonoBehaviour
 {
     [SerializeField] TMP_InputField nameInputField;
+    [SerializeField] TextMeshProUGUI bestScoreText;
 
     void Awake() 
     {
-
+        bestScoreText.text = "Best Score : " + GameManager.Instance.playerNameHighScore + " : " + GameManager.Instance.playerScore;
     }
 
     public void StartGame()
